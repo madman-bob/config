@@ -13,3 +13,6 @@ else
     echo "Creating .vimrc"
     echo "source \"$(dirname $0)/.vimrc\"" > ~/.vimrc
 fi
+
+echo "Pointing global gitignore to my version"
+git config --global core.excludesfile "$(dirname $0)/.gitignore_global"
