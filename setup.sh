@@ -14,5 +14,5 @@ else
     echo "source \"$(dirname $0)/.vimrc\"" > ~/.vimrc
 fi
 
-echo "Pointing global gitignore to my version"
-git config --global core.excludesfile "$(dirname $0)/.gitignore_global"
+echo "Include my gitconfig"
+git config --global include.path "$(dirname $0)/.gitconfig"

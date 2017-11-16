@@ -1,0 +1,18 @@
+[core]
+    editor = vim
+    excludesfile = .gitignore_global
+[color]
+    status = auto
+    pager = true
+    diff = auto
+    branch = auto
+[merge]
+    ff = false
+[pull]
+    ff = only
+[push]
+    default = current
+    followTags = true
+[rebase]
+    autoSquash = true
+    autoStash = true
