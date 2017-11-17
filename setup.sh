@@ -16,5 +16,8 @@ else
     echo "source \"$DIR/.vimrc\"" > ~/.vimrc
 fi
 
+echo "Installing vim plugins"
+vim +PlugInstall +qall
+
 echo "Include my gitconfig"
 git config --global include.path "$DIR/.gitconfig"
