@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+DIR="$(cd "$(dirname "$0")"; pwd -P)"
+
 if [ -f ~/.vim/autoload/plug.vim ]; then
     echo "VimPlug already installed"
 else
@@ -11,8 +13,8 @@ if [ -f ~/.vimrc ]; then
     echo ".vimrc already exists. Skipping"
 else
     echo "Creating .vimrc"
-    echo "source \"$(dirname $0)/.vimrc\"" > ~/.vimrc
+    echo "source \"$DIR/.vimrc\"" > ~/.vimrc
 fi
 
 echo "Include my gitconfig"
-git config --global include.path "$(dirname $0)/.gitconfig"
+git config --global include.path "$DIR/.gitconfig"
