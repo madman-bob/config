@@ -21,3 +21,6 @@ vim +PlugInstall +qall
 
 echo "Include my gitconfig"
 git config --global include.path "$DIR/.gitconfig"
+
+echo "Include my gitignore"
+git config --global core.excludesfile "$DIR/.gitignore_global"
