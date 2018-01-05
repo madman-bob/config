@@ -13,6 +13,9 @@ call plug#end()
 syntax on " Syntax highlighting
 set number " Line numbers
 
+set laststatus=2 " Always show status bar
+set statusline=%-40f\ (%y)\ %10((%l,%c)%)
+
 set background=light
 let g:solarized_termcolors=256
 colorscheme solarized
