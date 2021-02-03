@@ -2,6 +2,8 @@
 
 DIR="$(cd "$(dirname "$0")"; pwd -P)"
 
+# Vim
+
 if [ -f ~/.vim/autoload/plug.vim ]; then
     echo "VimPlug already installed"
 else
@@ -18,6 +20,8 @@ fi
 
 echo "Installing vim plugins"
 vim +PlugInstall +qall
+
+# Git
 
 echo "Include my gitconfig"
 git config --global include.path "$DIR/.gitconfig"
