@@ -13,7 +13,7 @@ if [ -f ~/.vimrc ]; then
     echo ".vimrc already exists. Skipping"
 else
     echo "Creating .vimrc"
-    echo "source \"$DIR/.vimrc\"" > ~/.vimrc
+    echo "source $DIR/.vimrc" > ~/.vimrc
 fi
 
 echo "Installing vim plugins"
