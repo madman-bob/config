@@ -1,2 +1,5 @@
 # Intellij
 .idea/*
+
+# Virtual Environments
+venv*/*
