@@ -2,6 +2,12 @@
 
 DIR="$(cd "$(dirname "$0")"; pwd -P)"
 
+# Ensure that file $1 contains line $2
+# Creates file/appends line as necessary
+function ensure_line {
+  grep -qxFs "$2" "$1" || echo "$2" >> "$1"
+}
+
 # Vim
 
 if [ -f ~/.vim/autoload/plug.vim ]; then
@@ -11,12 +17,8 @@ else
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
 
-if [ -f ~/.vimrc ]; then
-    echo ".vimrc already exists. Skipping"
-else
-    echo "Creating .vimrc"
-    echo "source $DIR/.vimrc" > ~/.vimrc
-fi
+echo "Include my .vimrc"
+ensure_line ~/.vimrc "source $DIR/.vimrc"
 
 echo "Installing vim plugins"
 vim +PlugInstall +qall
