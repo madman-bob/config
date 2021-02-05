@@ -48,3 +48,11 @@ git config --global include.path "$DIR/.gitconfig"
 
 echo "Include my gitignore"
 git config --global core.excludesfile "$DIR/.gitignore_global"
+
+# Pass
+
+echo "Include my pass profile"
+ensure_profile pass_config/.profile
+
+echo "Installing pass-code extension"
+download_file ~/.password-store/.extensions/code.bash https://raw.githubusercontent.com/alpernebbi/pass-code/master/code.bash
