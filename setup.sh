@@ -8,14 +8,21 @@ function ensure_line {
   grep -qxFs "$2" "$1" || echo "$2" >> "$1"
 }
 
+# Download file from url $2 to location $1
+# Assumes file correct if it already exists
+function download_file {
+  if [ -f "$1" ]; then
+    echo "$1 already exists"
+  else
+    curl -fLo "$1" --create-dirs "$2"
+    echo "$1 downloaded"
+  fi
+}
+
 # Vim
 
-if [ -f ~/.vim/autoload/plug.vim ]; then
-    echo "VimPlug already installed"
-else
-    echo "Installing VimPlug"
-    curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-fi
+echo "Installing VimPlug"
+download_file ~/.vim/autoload/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 echo "Include my .vimrc"
 ensure_line ~/.vimrc "source $DIR/.vimrc"
