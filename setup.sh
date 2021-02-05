@@ -8,6 +8,12 @@ function ensure_line {
   grep -qxFs "$2" "$1" || echo "$2" >> "$1"
 }
 
+# Ensure that profile $1 is sourced
+# Assumes non-existence of ~/.bash_profile and ~/.bash_login
+function ensure_profile {
+  ensure_line ~/.profile "source $DIR/$1"
+}
+
 # Download file from url $2 to location $1
 # Assumes file correct if it already exists
 function download_file {
@@ -18,6 +24,11 @@ function download_file {
     echo "$1 downloaded"
   fi
 }
+
+# Bash
+
+echo "Include my .profile"
+ensure_profile .profile
 
 # Vim
 
