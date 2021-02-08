@@ -3,3 +3,8 @@
 
 # Virtual Environments
 venv*/*
+
+# Python package build files
+dist/*
+build/*
+*.egg-info/*
