@@ -4,6 +4,7 @@ call plug#begin()
 
 Plug 'tpope/vim-surround'
 Plug 'airblade/vim-gitgutter'
+Plug 'vim-airline/vim-airline'
 Plug 'altercation/vim-colors-solarized'
 
 call plug#end()
