@@ -6,6 +6,7 @@ Plug 'tpope/vim-surround'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
 Plug 'altercation/vim-colors-solarized'
+Plug 'edwinb/idris2-vim'
 
 call plug#end()
 
@@ -42,6 +43,7 @@ set splitright
 " Custom commands
 
 let mapleader=' '
+let maplocalleader=' '
 
 nnoremap <leader>p viwpyiw
 
