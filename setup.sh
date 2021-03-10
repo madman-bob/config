@@ -56,3 +56,10 @@ ensure_profile pass_config/.profile
 
 echo "Installing pass-code extension"
 download_file ~/.password-store/.extensions/code.bash https://raw.githubusercontent.com/alpernebbi/pass-code/master/code.bash
+
+# Intellij
+
+## IdeaVim plugin
+
+echo "Include my .vimrc in Intellij IdeaVim"
+ensure_line ~/.ideavimrc "source $DIR/.vimrc"
