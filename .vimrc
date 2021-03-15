@@ -42,6 +42,8 @@ set splitright
 
 " Custom commands
 
+set shellcmdflag=-ic " Allow bash aliases in vim shell
+
 let mapleader=' '
 let maplocalleader=' '
 
@@ -49,3 +51,6 @@ nnoremap <leader>p viwpyiw
 
 nnoremap <tab> <c-w>w
 nnoremap <s-tab> <c-w>W
+
+xnoremap gy :'<,'>:w !clip<enter><enter>
+nmap gy Vgy

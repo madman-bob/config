@@ -27,6 +27,9 @@ function download_file {
 
 # Bash
 
+echo "Include my .bashrc"
+ensure_line ~/.bashrc "source $DIR/.bashrc"
+
 echo "Include my .profile"
 ensure_profile .profile
 
