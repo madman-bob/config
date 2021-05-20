@@ -59,6 +59,7 @@ ensure_profile pass_config/.profile
 
 echo "Installing pass-code extension"
 download_file ~/.password-store/.extensions/code.bash https://raw.githubusercontent.com/alpernebbi/pass-code/master/code.bash
+chmod u+x ~/.password-store/.extensions/code.bash
 
 # Intellij
 
