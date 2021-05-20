@@ -23,6 +23,11 @@ let g:solarized_termcolors=256
 colorscheme solarized
 set list listchars=tab:▸\ ,trail:·,extends:→,precedes:←,nbsp:•
 
+highlight SignColumn ctermbg=black
+highlight GitGutterAdd ctermfg=green
+highlight GitGutterChange ctermfg=yellow
+highlight GitGutterDelete ctermfg=red
+
 " Controls
 
 set mouse=n " Enable mouse usage
