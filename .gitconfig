@@ -5,6 +5,8 @@
     pager = true
     diff = auto
     branch = auto
+[alias]
+    l = log --graph --pretty=format:'%Cred%h%C(yellow)%d %Creset- %s %Cgreen(%ad) %C(blue)<%an>%Creset' --date=relative
 [merge]
     ff = false
 [pull]
