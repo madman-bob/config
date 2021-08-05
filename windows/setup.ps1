@@ -13,6 +13,9 @@ choco install -y firefox dropbox
 echo "Install editors"
 choco install -y intellijidea-community typora
 
+echo "Include my .vimrc in Intellij IdeaVim"
+New-Item -Path "$HOME" -Name ".ideavimrc" -ItemType "file" -Value "source $(Get-Location | select -ExpandProperty Path)\.vimrc"
+
 echo "Install communication programs"
 choco install -y thunderbird discord
 
