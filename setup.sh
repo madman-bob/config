@@ -72,3 +72,8 @@ ensure_line ~/.ideavimrc "source $DIR/.vimrc"
 
 echo "Default Python to Python 3"
 sudo apt-get install python-is-python3
+
+# Utils
+
+echo "Install dos2unix"
+sudo apt-get install dos2unix
