@@ -28,3 +28,9 @@ bash -c "sudo apt-get update && sudo apt-get upgrade"
 
 echo "Run my setup on WSL2"
 bash -c "./setup.sh"
+
+echo "Set File Explorer default location to Dropbox\Notes"
+$WshShell = New-Object -comObject WScript.Shell
+$Shortcut = $WshShell.CreateShortcut("$ENV:APPDATA\Microsoft\Internet Explorer\Quick Launch\User Pinned\TaskBar\File Explorer.lnk")
+$Shortcut.TargetPath = "$HOME\Dropbox\Notes"
+$Shortcut.Save()
