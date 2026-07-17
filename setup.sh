@@ -67,3 +67,8 @@ chmod u+x ~/.password-store/.extensions/code.bash
 
 echo "Include my .vimrc in Intellij IdeaVim"
 ensure_line ~/.ideavimrc "source $DIR/.vimrc"
+
+# Python
+
+echo "Default Python to Python 3"
+sudo apt-get install python-is-python3
