@@ -1,5 +1,6 @@
 alias clip="clip.exe" # WSL specific
 alias p="pass code"
+alias 2fa="oathtool --base32 --totp -d 6"
 
 win() {
     explorer.exe `wslpath -w "${1:-.}"`
