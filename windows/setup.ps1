@@ -34,3 +34,6 @@ $WshShell = New-Object -comObject WScript.Shell
 $Shortcut = $WshShell.CreateShortcut("$ENV:APPDATA\Microsoft\Internet Explorer\Quick Launch\User Pinned\TaskBar\File Explorer.lnk")
 $Shortcut.TargetPath = "$HOME\Dropbox\Notes"
 $Shortcut.Save()
+
+# Switch to bash for rest of setup
+bash -c "./windows/setup.sh"
